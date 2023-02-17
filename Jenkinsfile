@@ -3,7 +3,12 @@ pipeline{
   stages {
     stage("start"){
       steps{
-        bat 'aaa'
+        echo 'start..........'
+      }
+    }
+    stage("end"){
+      steps{
+        echo 'end...........'
       }
     }
   }
