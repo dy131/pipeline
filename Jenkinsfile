@@ -3,7 +3,7 @@ pipeline{
   stages {
     stage("Build"){
       options{
-         timout(time: 1,unit: "MINUTES")
+         timeout(time: 1,unit: "MINUTES")
       }
       steps{
         echo 'Some code compilation here ....'
@@ -11,7 +11,7 @@ pipeline{
     }
     stage("Test"){
       options{
-         timout(time: 2,unit: "MINUTES")
+         timeout(time: 2,unit: "MINUTES")
       }
       steps{
         echo 'Test code here ......'
@@ -19,7 +19,7 @@ pipeline{
     }
     stage("Run"){
       options{
-         timout(time: 1,unit: "MINUTES")
+         timeout(time: 1,unit: "MINUTES")
       }
       steps{
         echo 'Run code here ......'
