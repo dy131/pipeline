@@ -1,14 +1,28 @@
 pipeline{
   agent any
   stages {
-    stage("start"){
+    stage("Build"){
+      options{
+         timout(time: 1,unit: "MINUTES")
+      }
       steps{
-        echo 'start..........'
+        echo 'Some code compilation here ....'
       }
     }
-    stage("end"){
+    stage("Test"){
+      options{
+         timout(time: 2,unit: "MINUTES")
+      }
       steps{
-        echo 'end...........'
+        echo 'Test code here ......'
+      }
+    }
+    stage("Run"){
+      options{
+         timout(time: 1,unit: "MINUTES")
+      }
+      steps{
+        echo 'Run code here ......'
       }
     }
   }
